@@ -11,7 +11,7 @@ document.getElementById("myName").textContent = myName;
 document.getElementById("myAvatar").textContent = myAvatar;
 
 /** 2. SIGNALING & STATE **/
-const socket = new WebSocket("ws://localhost:8080");
+const socket = new WebSocket("https://peerdrop-55d4.onrender.com");
 let peers = {}; // Stores RTCPeerConnection objects
 
 socket.onopen = () => {
@@ -204,4 +204,5 @@ function addHistoryItem(name) {
     li.style.cssText = "list-style:none; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:0.85rem;";
     li.innerHTML = `<span>📄 ${name}</span> <br> <small style="color:var(--text-dim)">Received at ${new Date().toLocaleTimeString()}</small>`;
     list.prepend(li);
+
 }
