@@ -1,0 +1,260 @@
+:root {
+    --bg-dark: #07090e;
+    --sidebar: #0f121a;
+    --accent: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.3);
+    --glass: rgba(255, 255, 255, 0.03);
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background: var(--bg-dark); 
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container { display: flex; height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: var(--sidebar);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 3rem; }
+.logo-icon { font-size: 1.5rem; background: var(--accent); padding: 8px; border-radius: 12px; }
+.brand h1 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+
+.my-profile {
+    background: var(--glass);
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.avatar-circle { font-size: 2.5rem; margin-bottom: 10px; }
+.profile-info .label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; }
+.profile-info h2 { font-size: 1rem; margin-top: 4px; }
+
+/* Main Stage */
+.main-stage { flex: 1; padding: 2rem; overflow-y: auto; background: radial-gradient(circle at top right, #131722, var(--bg-dark)); }
+.stage-header { margin-bottom: 2rem; }
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.pulse-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; animation: pulse 2s infinite; }
+
+/* User Cards */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.user-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.user-card .avatar { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+
+/* Modals */
+.modal {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px); display: flex; align-items: center; 
+    justify-content: center; z-index: 1000;
+}
+.glass-card {
+    background: #161b22;
+    padding: 2.5rem;
+    border-radius: 32px;
+    width: 380px;
+    text-align: center;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 50px var(--accent-glow);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.hidden { display: none !important; }
+
+/* Progress Bar */
+.progress-bar {
+    height: 12px; background: #21262d; border-radius: 10px;
+    margin: 20px 0; overflow: hidden;
+}
+#progressFill {
+    height: 100%; width: 0%; background: var(--accent);
+    box-shadow: 0 0 20px var(--accent); transition: width 0.3s ease;
+}
+
+.btn-primary { 
+    background: var(--accent); color: white; border: none; 
+    padding: 12px 24px; border-radius: 14px; font-weight: 600; cursor: pointer;
+}
+:root {
+    --bg-dark: #07090e;
+    --sidebar: #0f121a;
+    --accent: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.3);
+    --glass: rgba(255, 255, 255, 0.03);
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background: var(--bg-dark); 
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container { display: flex; height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: var(--sidebar);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 3rem; }
+.logo-icon { font-size: 1.5rem; background: var(--accent); padding: 8px; border-radius: 12px; }
+.brand h1 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+
+.my-profile {
+    background: var(--glass);
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.avatar-circle { font-size: 2.5rem; margin-bottom: 10px; }
+.profile-info .label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; }
+.profile-info h2 { font-size: 1rem; margin-top: 4px; }
+
+/* Main Stage */
+.main-stage { flex: 1; padding: 2rem; overflow-y: auto; background: radial-gradient(circle at top right, #131722, var(--bg-dark)); }
+.stage-header { margin-bottom: 2rem; }
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.pulse-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; animation: pulse 2s infinite; }
+
+/* User Cards */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.user-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.user-card .avatar { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+
+/* Modals */
+.modal {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px); display: flex; align-items: center; 
+    justify-content: center; z-index: 1000;
+}
+.glass-card {
+    background: #161b22;
+    padding: 2.5rem;
+    border-radius: 32px;
+    width: 380px;
+    text-align: center;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 50px var(--accent-glow);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.hidden { display: none !important; }
+
+/* Progress Bar */
+.progress-bar {
+    height: 12px; background: #21262d; border-radius: 10px;
+    margin: 20px 0; overflow: hidden;
+}
+#progressFill {
+    height: 100%; width: 0%; background: var(--accent);
+    box-shadow: 0 0 20px var(--accent); transition: width 0.3s ease;
+}
+
+.btn-primary { 
+    background: var(--accent); color: white; border: none; 
+    padding: 12px 24px; border-radius: 14px; font-weight: 600; cursor: pointer;
+}
