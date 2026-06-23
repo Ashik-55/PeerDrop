@@ -65,24 +65,20 @@ PeerDrop/
 ## 🖼️ Screenshots
 
 ### Home Page
-```markdown
-<img width="1910" height="872" alt="screen4" src="https://github.com/user-attachments/assets/92dfce94-f076-4d6d-b917-7d54bbeb8e87" />
-```
+![HomePage](Screenshots/homepage.png)
+
 
 ---
 
 ### Incoming Transfer Request
-```markdown
-<img width="1910" height="872" alt="screen2" src="https://github.com/user-attachments/assets/89c69b57-c6da-459b-876a-d419feaf26bc" />
-```
+![Incoming Request](Screenshots/incomingrequest.png)
+
 
 ---
 
 ### File Transfer Progress
-```markdown
-<img width="1910" height="872" alt="screen3" src="https://github.com/user-attachments/assets/e3aef49c-3d33-48da-9fee-fb8c6b3b0d67" />
+![FileTransfer](Screenshots/filetransfer.png)
 
-```
 
 ---
 
